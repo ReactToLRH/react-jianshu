@@ -1,8 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import store from './store';
 import Header from './common/header';
+import Home from './pages/home';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <BrowserRouter>
         <div>
           <Header />
+          <Route path='/' exact component={Home}></Route>
         </div>
       </BrowserRouter>
     </Provider>
